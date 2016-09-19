@@ -1,0 +1,95 @@
+@import "variables";
+
+@btn-disabled-border-color: #cccccc;
+@btn-disabled-background:  #e8e8e8;
+@btn-disabled-color: #000000;
+@btn-disabled-opacity: 0.4;
+@btn-disabled-font-style: italic;
+
+@btn-hover-background : #f90;
+@btn-hover-border-color : #f60;
+@btn-hover-color: #ffffff;
+
+@btn-vam-border-radius : 0px;
+@btn-vam-background : #f16e00;
+@btn-vam-font-size: 15px;
+@btn-vam-color : #ffffff;
+@btn-vam-hover-background : #ffcc00;
+@btn-vam-hover-border-color : #f60;
+@btn-vam-hover-color: #000000;
+
+.btn.btn-primary {
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: @btn-disabled-background;
+        border-color: @btn-disabled-border-color;
+        opacity: @btn-disabled-opacity;
+        font-style: @btn-disabled-font-style;
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:hover,
+        &:active:focus {
+            background-color: @btn-disabled-background;
+            border-color: @btn-disabled-border-color;
+            color:  @btn-disabled-color;
+            opacity: @btn-disabled-opacity;
+            font-style: @btn-disabled-font-style;
+        }
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.active:hover,
+    &.active:focus,
+    &:active:hover,
+    &:active:focus {
+        background-color: @btn-hover-background ;
+        border-color: @btn-hover-border-color;
+        color: @btn-hover-color;
+    }
+}
+
+.btn-toolbar.toolbar-condensed {
+    margin-top: 5px;
+}
+
+.btn.btn-vam {
+    border-radius: @btn-vam-border-radius;
+    background-color: @btn-vam-background;
+    color: @btn-vam-color;
+    font-size : @btn-vam-font-size;
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: @btn-disabled-background;
+        border-color: @btn-disabled-border-color;
+        opacity: @btn-disabled-opacity;
+        font-style: @btn-disabled-font-style;
+        &:hover,
+        &:active,
+        &:focus,
+        &:active:hover,
+        &:active:focus {
+            background-color: @btn-disabled-background;
+            border-color: @btn-disabled-border-color;
+            color:  @btn-disabled-color;
+            opacity: @btn-disabled-opacity;
+            font-style: @btn-disabled-font-style;
+        }
+    }
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.active:hover,
+    &.active:focus,
+    &:active:hover,
+    &:active:focus {
+        background-color: @btn-vam-hover-background ;
+        border-color: @btn-vam-hover-border-color;
+        color: @btn-vam-hover-color;
+    }
+}

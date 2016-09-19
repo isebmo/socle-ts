@@ -1,0 +1,14 @@
+.row.vertical-align {
+    display: flex;
+    align-items: flex-end;
+}
+
+.linkCursor {
+    cursor: pointer;
+}
+
+/* désactive le focus d'un élément d'une nav-bar
+(mais laisse le comportement intacte lors du hover et des tabs actives) */
+.nav-tabs.nav-tabs-without-focus > li:not(.active) > a:focus:not(:hover) {
+    background: inherit;
+}

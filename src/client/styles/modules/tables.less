@@ -1,0 +1,63 @@
+@import "variables";
+
+@pagination-a-background : #f90;
+@pagination-a-border-color : #f60;
+@pagination-a-hover-color: #ffffff;
+
+@pagination-a-color :#000;
+
+.table.ng-table {
+    .active{
+        tr{
+            background-color: @pagination-a-background;
+        }
+    }
+
+    td.commentLink i {
+        color: @pagination-a-background;
+    }
+}
+
+
+.ng-table th.sortable.sort-desc, .ng-table th.sortable.sort-asc {
+    background-color: lighten(@pagination-a-background, 40%);
+}
+
+.pagination.ng-table-pagination {
+    .active {
+        a {
+            z-index: 3;
+            color: @pagination-a-hover-color;
+            background-color: @pagination-a-background;
+            border-color: @pagination-a-border-color;
+            cursor: default;
+            &:hover {
+                z-index: 3;
+                color: #ffffff;
+                background-color: @pagination-a-background;
+                border-color: @pagination-a-border-color;
+                cursor: default;
+            }
+            &:focus {
+                z-index: 3;
+                color: @pagination-a-color;
+                background-color: @pagination-a-background;
+                border-color: @pagination-a-border-color;
+                cursor: default;
+            }
+        }
+    }
+    a {
+        &:hover {
+            z-index: 3;
+            color: #ffffff;
+            background-color: @pagination-a-background;
+            border-color: @pagination-a-border-color;
+            cursor: default;
+        }
+    }
+}
+
+div.historiqueTable {
+    margin-top: 15px;
+}

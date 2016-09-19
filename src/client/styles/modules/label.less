@@ -1,0 +1,37 @@
+@import "variables";
+
+.label-orange {
+    color: @brand-warning;
+}
+
+.label-is-required {
+    position: relative;
+    padding-left: 15px;
+
+    &.control-label {
+        &:before {
+            top: ~'calc(50% - 9px)';
+        }
+    }
+
+    &:before {
+        content: '*';
+        position: absolute;
+        top: ~'calc(50% - 12px)';
+        margin-left: -15px;
+        font-size: 25px;
+        color: @main-color-orange;
+    }
+}
+
+.label-radion-is-required {
+
+    &:before {
+        content: '*';
+        position: absolute;
+        top: ~'calc(50% - 12px)';
+        margin-left: -30px;
+        font-size: 25px;
+        color: @main-color-orange;
+    }
+}

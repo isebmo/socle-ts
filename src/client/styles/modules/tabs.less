@@ -1,0 +1,27 @@
+#meffinTabPanel {
+    margin-top: 10px;
+    border-bottom: 2px solid #DDDDDD;
+    & > div {
+        margin-left: 10px;
+    }
+    ul.nav-tabs.nav-justified {
+        > li {
+            margin-right:5px;
+            & > a {
+                border-top: 2px solid #DDDDDD;
+                border-left: 2px solid #DDDDDD;
+                border-right: 2px solid #DDDDDD;
+                border-bottom: none;
+                margin: 0 0 -2px;
+                opacity: 0.9;
+                font-weight: bold;
+                outline: none;
+            }
+            &.active > a {
+                opacity: 1;
+                margin: 0 -2px -2px;
+                border-top: 4px solid #FF9900;
+            }
+        }
+    }
+}
