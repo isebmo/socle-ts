@@ -5,7 +5,9 @@ module app {
         'app.core',
         'app.widgets',
         'app.layout',
-        'app.tp1'
+        'app.tp1',
+        'app.tp2'
+
 
     ]);
 }

@@ -1,0 +1,55 @@
+<section>
+    <form name="newForm" class="form-horizontal col-sm-6">
+        <div class="form-group">
+            <label for="nom" class="col-sm-2 control-label">Nom</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="nom" placeholder="Nom" ng-model="vm.nom">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="prenom" class="col-sm-2 control-label">Prénom</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="prenom" placeholder="Prénom" ng-model="vm.prenom">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="film" class="col-sm-2 control-label">Film</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="film" placeholder="Film" ng-model="vm.film  ">
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="col-sm-offset-2 col-sm-2">
+                <button type="submit" class="btn btn-primary" ng-click="vm.enregistrer()">Enregistrer</button>
+            </div>
+            <div class="col-sm-5">
+                <button type="reset" class="btn btn-default">Annuler</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="col-sm-6">
+        <table class="table">
+            <caption>Nouveau personnage de film</caption>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th ng-click="vm.orderBy('nom')">Nom</th>
+                <th ng-click="vm.orderBy('prenom')">Prénom</th>
+                <th ng-click="vm.orderBy('film')">Film</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="pers in vm.personnes | orderBy:vm.order:vm.reverse">
+                <th scope="row">1</th>
+                <td>{{pers.nom}}</td>
+                <td>{{pers.prenom}}</td>
+                <td>{{pers.film}}</td>
+                <th><a class="btn btn-default" ui-sref="app.tp3">Détails</a></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
